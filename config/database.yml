@@ -27,7 +27,7 @@ default: &default
 development:
   <<: *default
   adapter: postgresql
-  database: coldpostgres
+  database: coldspostgres
   username: postgres
   password: rails
   host: localhost
