@@ -1,36 +1,43 @@
-#main-content {
-    background: white;
-    min-height: 800px;
-    margin: 0;
-    padding: 10px 0 0 0;
+.single-post-card {
+    min-height: 135px;
+    max-height: 135px;
+    box-shadow: 1px 1px 4px rgba(0,0,0, 0.3);
+    color: black;
+    padding: 10px;
+    text-align: left;
+    transition: border 0.1s, background 0.5s;
+    .post-text {
+      overflow: hidden;
+    }
+    a, a:active, a:hover {
+      color: black;
+    }
+    &:hover {
+      cursor: pointer;
+      background: white;
+      box-shadow: none;
+      border-radius: 1%;
+    }
   }
   
-  #side-menu {
-    padding: 0;
-    #links-list {
-      margin-top: 20px;
-      padding: 0;
-      font-size: 14px;
-      font-size: 1.4rem;
-      a {
-        display: block;
-        padding: 5px 15px;
-        margin: 2px 0;
-      }
-      li {
-        min-width: 195px;
-        max-width: 195px;
-      }
-      li, li a {
-        color: black;
-        text-decoration: none;
-      }
-      li:hover {
-        border-radius: 50px;
-        background: $navbarColor;
-      }
-      li:hover a, li:hover i {
-        color: white;
-      }
+  .post-content {
+    display: none;
+  }
+  
+  .solid-color-mode, .border-color-mode {
+    .post-text {
+      text-align: center;
     }
+  }
+  
+  .solid-color-mode {
+    .post-text {
+      padding: 10px;
+      background-color: white;
+      border-radius: 25px;
+    }
+  }
+  
+  .border-color-mode {
+    background-color: white;
   }
