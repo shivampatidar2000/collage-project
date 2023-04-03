@@ -1,3 +1,18 @@
+.page-name {
+  margin: 27px 5px 27px 5px;
+  text-align: center;
+  background-color: white !important;
+  font-weight: bold;
+  padding: 3px;
+  a {
+    color: black;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+
 .single-post-card {
     min-height: 135px;
     max-height: 135px;
