@@ -1,72 +1,155 @@
-.navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
-    background: $navbarColor !important;
-    border: none;
-    a {
-      color: white !important;
-    }
-  }
-  nav {
-    .navbar-header {
-      width: 100%;
-      button, .navbar-brand {
-        transition: opacity 0.15s;
-      }
-      button {
-        margin-right: 0;
-      }
-      button:hover, .navbar-brand:hover {
-        opacity: 0.8;
+  .navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
+      background: $navbarColor !important;
+      border: none;
+      a {
+        color: white !important;
       }
     }
-    .col-sm-5, .col-sm-7 {
-      padding: 0;
+    nav {
+      .navbar-header {
+        width: 100%;
+        button, .navbar-brand {
+          transition: opacity 0.15s;
+        }
+        button {
+          margin-right: 0;
+        }
+        button:hover, .navbar-brand:hover {
+          opacity: 0.8;
+        }
+      }
+      .col-sm-5, .col-sm-7 {
+        padding: 0;
+      }
     }
-  }
-  body {
-    margin-top: 60px;
-   }
-   .pc-menu {
-    margin-right: 10px;
-  }
-  
-  .mobile-menu {
-    i {
-      color: white;
+    body {
+      margin-top: 60px;
+     }
+     .pc-menu {
+      margin-right: 10px;
     }
-    ul {
-      padding: 0px;
-    }
-    a {
-      display: block;
-      padding: 10px 0px 10px 25px !important;
-    }
-    a:hover {
-      background: white !important;
-      color: black !important;
+    
+    .mobile-menu {
       i {
-        color: black;
+        color: white;
+      }
+      ul {
+        padding: 0px;
+      }
+      a {
+        display: block;
+        padding: 10px 0px 10px 25px !important;
+      }
+      a:hover {
+        background: white !important;
+        color: black !important;
+        i {
+          color: black;
+        }
       }
     }
-  }
+    
+    .icon-bar {
+      background-color: white !important;
+    }
+    
+    .active a {
+      background: $navbarColor !important;
+      border-bottom: solid 5px white;
+    }
+    
+    .dropdown-toggle, .dropdown-menu {
+      background: $navbarColor !important;
+      border: none;
+    }
+    
+    .dropdown-menu a:hover {
+      color: black !important;
+      background: white !important;
+    }
   
-  .icon-bar {
-    background-color: white !important;
-  }
-  
-  .active a {
-    background: $navbarColor !important;
-    border-bottom: solid 5px white;
-  }
-  
-  .dropdown-toggle, .dropdown-menu {
-    background: $navbarColor !important;
-    border: none;
-  }
-  
-  .dropdown-menu a:hover {
-    color: black !important;
-    background: white !important;
-  }
- 
-
-  
+    .brand-mobile {
+      font-size: 20px;
+      font-size: 2.0rem;
+    }
+    
+    .navigation-items {
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+    
+    .navbar-header {
+      .open {
+        width: 36px;
+      }
+    }
+    
+    .non-user-nav-links {
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
+      vertical-align: middle;
+      padding-right: 20px;
+    }
+    
+    #conversations-menu, #contacts-requests {
+      font-size: 20px;
+      font-size: 2.0rem;
+      height: 50px;
+      line-height: 50px;
+      padding-right: 10px;
+    
+      ul {
+        margin: 0;
+        position: relative;
+        top: 50px;
+        right: 200px;
+        border-radius: 0 0 5px 5px;
+        height: 300px;
+        overflow: scroll;
+        overflow-x: hidden;
+        li {
+          a {
+            width: 100%;
+          }
+        }
+      }
+      .unseen-conv {
+        a {
+          background: $backgroundColor;
+          color: black !important;
+        }
+      }
+    }
+    
+    #unseen-conversations, #unresponded-contact-requests {
+      visibility: hidden;
+      padding: 1px;
+      position: absolute;
+      // color: white;
+      font-size: 13px;
+      font-size: 1.3rem;
+    }
+    
+    #unseen-conversations {
+      right: 5px;
+      background: #E92F2F;
+    }
+    
+    #conversations-menu {
+      i {
+        position: relative;
+      }
+    }
+    
+    #conversations-list {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 0;
+      .col-sm-2 {
+        padding: 0;
+      }
+    }
+    
