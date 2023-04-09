@@ -11,6 +11,7 @@ require 'capybara/poltergeist'
 require 'factory_bot_rails'
 require 'capybara/rspec'
 
+Capybara.default_max_wait_time = 5
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
