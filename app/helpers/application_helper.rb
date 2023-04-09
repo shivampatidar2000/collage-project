@@ -4,5 +4,6 @@ module ApplicationHelper
     include PostsHelper
     include NavigationHelper
     include Private::ConversationsHelper
+    include Private::MessagesHelper
 
 end
