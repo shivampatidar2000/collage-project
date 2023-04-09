@@ -36,5 +36,7 @@ class User < ApplicationRecord
   def contact(contact)
     Contact.where(user_id: self.id, contact_id: contact.id)[0]
   end   
-  
+  has_many :group_messages, class_name: 'Group::Message'
+  has_and_belongs_to_many :group_conversations, class_name: 'Group::Conversation'
+
 end
