@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.feature "window", :type => :feature do
-  let(:user) { create(:user) }
+  let(:user) { create   (:user) }
   let(:conversation) { create(:private_conversation, sender_id: user.id) }
   let(:open_window) do
     sign_in user
