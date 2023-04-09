@@ -13,9 +13,9 @@
   <body>
 
 <%= render 'layouts/navigation' %>
+    <%= yield %>
 <%= include_gon(:init => true) %>
     <%= render 'layouts/application/private_conversations_windows' %>
     <%= render 'layouts/application/group_conversations_windows' %>
-    <%= yield %>
   </body>
 </html>
