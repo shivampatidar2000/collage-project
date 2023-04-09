@@ -3,9 +3,5 @@
 </div> <!-- conversation-heading -->
 
 <!-- Close conversation button -->
-<%= link_to "X", 
-            close_private_conversation_path(conversation), 
-            class: 'close-conversation', 
-            title: 'Close', 
-            remote: true, 
-            method: :post %>
+<%= link_to "X", close_private_conversation_path(conversation), class: 'close-conversation', title: 'Close', remote: true, method: :post %>
+<%= render add_to_contacts_partial_path(@contact) %>

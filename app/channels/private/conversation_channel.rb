@@ -21,5 +21,5 @@ class Private::ConversationChannel < ApplicationCable::Channel
     messages.each do |message|
       message.update(seen: true)
     end
-  ends
+  end
 end
