@@ -16,4 +16,7 @@ class Private::Conversation < ApplicationRecord
         user == recipient ? sender : recipient
     end
     
+    scope :all_by_user, -> (user_id) do
+        where(recipient_id: user_id).or(where(sender_id: user_id))
+      end
 end
