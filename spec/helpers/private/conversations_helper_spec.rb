@@ -94,4 +94,22 @@ RSpec.describe Private::ConversationsHelper, type: :helper do
       end
     end
   end
+  context '#create_group_conv_partial_path' do
+    let(:contact) { create(:contact) }
+  
+    it "returns a create_group_conversation partial's path" do 
+      helper.stub(:recipient_is_contact?).and_return(true)
+      expect(helper.create_group_conv_partial_path(contact)).to(
+        eq 'private/conversations/conversation/heading/create_group_conversation'
+      )
+    end
+  
+    it "returns an empty partial's path" do 
+      helper.stub(:recipient_is_contact?).and_return(false)
+      expect(helper.create_group_conv_partial_path(contact)).to(
+        eq 'shared/empty_partial'
+      )
+    end
+  end
+  
 end

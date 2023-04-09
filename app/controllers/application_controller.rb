@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     def redirect_if_signed_in
         redirect_to root_path if user_signed_in?
     end
+    private
 
     def opened_conversations_windows
       if user_signed_in?
@@ -32,7 +33,6 @@ class ApplicationController < ActionController::Base
       end
     end
   
-    private
     def set_user_data
       if user_signed_in?
         gon.group_conversations = current_user.group_conversations.ids
